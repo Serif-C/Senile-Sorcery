@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a885883eb056542adcc4f0030338e8, type: 3}
+  m_Name: Inc Pierce
+  m_EditorClassIdentifier: 
+  upgradeDescription: Pierce!
+  upgradeArtwork: {fileID: 21300000, guid: 330ac2a2a3c1ba14393b41834bf59408, type: 3}
+  upgradeButton: {fileID: 7423859604054657970, guid: 7e518b9e1a6d0b149a04e5ebfa467215, type: 3}

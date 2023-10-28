@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2907750102960583739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2907750102960583738}
+  - component: {fileID: 2907750102960583737}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2907750102960583738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2907750102960583739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.8486927, y: 1.1429536, z: 0.60302895}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2907750102960583737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2907750102960583739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a2512770a94aa4f9d68a68dd4095cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  currentHealth: 0
+  dmg: 50
+  armour: 1
+  critChance: 0
+  critMulti: 100
+  lvl: 0
+  currentExp: 0
+  expNeeded: 1000
+  shootCoolDown: 2
+  startShootCoolDown: 1
+  shootRate: 0.1
+  shootRateLimit: 0.3
+  projectileCount: 1
+  projectileSpreadAngle: 20
+  canPierce: 0
+  numOfPierce: 0
+  elapsedTime: 0
+  minutes: 0
+  seconds: 0
+  numOfEnemies: 0
+  initialMaxNumOfEnemies: 20
+  currentMaxNumOfEnemies: 20
+  currentState: 0
+  previousState: 0
+  pauseScreen: {fileID: 1520298200905993757, guid: 5a0026cdbf1b19844899182e7b65dd79, type: 3}
+  levelUpScreen: {fileID: 8487401700602322629, guid: 6981da0546d8ea145b29e344db48c3e2, type: 3}
+  statusScreen: {fileID: 2781420784324548168, guid: 6bf5a4b785d7f10438076b4d1c0c96aa, type: 3}
+  randomizeUpgrade: {fileID: 8487401700602322624, guid: 6981da0546d8ea145b29e344db48c3e2, type: 3}
+  upgradeType: 0

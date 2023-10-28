@@ -1,0 +1,14 @@
+--Codes that Requires Optimization--
+
+	BulletDmg Script:
+	- Probably better to use switch statements when checking for bullet modifiers such as pierce and elements
+
+
+--Systems that need to be implemented another way--
+	
+	Damage Numbers:
+	-Should play different dmg animation for different type of dmg done
+		-Normal dmg, Crit dmg, Explode dmg, etc. Should each have their own animation
+		-Normal dmg - small
+		-Crit dmg - large, screen shake, diff color
+		-Explode dmg - medium, screen shake, diff color

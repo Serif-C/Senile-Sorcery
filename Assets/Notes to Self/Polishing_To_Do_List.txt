@@ -1,0 +1,8 @@
+For Polishing:
+- Add DOTweens on UI's and whevers it might be cool so that not everything on the scene is static/flat
+- Add Outlines 
+- Add Particles 
+- Add Ambient Particles
+- Add Player/Enemy Hit Effect
+- Add UI Animation on Card Upgrades (similar to heartstone)
+- Add Screen Shakes
