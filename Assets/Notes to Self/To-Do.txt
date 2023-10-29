@@ -1,0 +1,16 @@
+--Skill Tree System--
+	- Spend coin earned from battles to buy permanent power up
+	- Skill tree is divided into offense, defense, elements, utilities, etc...
+
+--Stage System--
+	- After defeating the floor boss, enemies stops spawing
+	- Once the remaining enemies have been cleared, door to next floor opens
+	- After clearing several floors the door to final boss would spawn
+
+--Element System--
+	- Elements are different from the normal upgrades, they are much more powerful and they alter your projectile properties
+	- After beating a floor boss, you get to choose a random element to imbue your magic
+	- Certain upgrades only shows up on certain elements (eg, explode radius for fire element, etc...)
+
+--Achievement System--
+	- Earning Achievements allows you to unlock more upgrades, elements, (maybe characters)

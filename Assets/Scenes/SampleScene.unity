@@ -98747,7 +98747,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2907750102960583737, guid: a7f86d5a220e8364e8f364a0a8543ca7, type: 3}
       propertyPath: currentElementType
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2907750102960583737, guid: a7f86d5a220e8364e8f364a0a8543ca7, type: 3}
       propertyPath: currentMaxNumOfEnemies
