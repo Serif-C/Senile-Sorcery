@@ -1,16 +1,42 @@
 --Skill Tree System--
-	- Spend coin earned from battles to buy permanent power up
-	- Skill tree is divided into offense, defense, elements, utilities, etc...
+	- Account Level earned from each run gives skill points to progress skill tree
+
+--Item/Equipment System #1--
+	- Buy/Enchant gears using coins/materials earned from a run
+	- Monsters (or maybe bosses) have a very small chance of dropping powerful items
+	- Potions
+
+--Item/Equipment System #2-- I
+	- Buy/Enchant cards using coins/materials earned from a run
+	- Upgrades within a run is a combination of cards that you have equipped upon the start of the run
+	- Potions
 
 --Stage System--
-	- After defeating the floor boss, enemies stops spawing
-	- Once the remaining enemies have been cleared, door to next floor opens
+	- After defeating the floor boss, you can choose to keep grinding or go to the next floor
 	- After clearing several floors the door to final boss would spawn
 
---Element System--
+--Element System #1-- 
 	- Elements are different from the normal upgrades, they are much more powerful and they alter your projectile properties
 	- After beating a floor boss, you get to choose a random element to imbue your magic
 	- Certain upgrades only shows up on certain elements (eg, explode radius for fire element, etc...)
 
+--Element System #2--
+	- Weapons could be built into weapons instead of being in upgrade pool
+
 --Achievement System--
-	- Earning Achievements allows you to unlock more upgrades, elements, (maybe characters)
+	- Earning Achievements allows you to unlock more items, upgrades, etc...
+
+
+Some ideas to make the game an immersive adventure experience:
+- Make money/coin (basically loot from monsters) feel important
+	- drop rates could be low
+	- prices could be expensive
+	- money/coin could be used in a lot of things
+	- etc...
+
+- Make some sort of invisible progression system that a player would naturally do
+	For example:
+	- Complete several runs to earn Account Levels and progress the skill tree
+	- Make the next floor significantly harder than the previous floor to encourage grinding
+	- Grind for monster drops to afford gears, enchantments, potions, cards, etc... 
+	- Complete achivements to unlock features (eg, better items, etc...)
