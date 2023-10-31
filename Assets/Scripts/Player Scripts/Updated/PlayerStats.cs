@@ -4,26 +4,21 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-
-    // Reference of Player rigidBody
     [SerializeField] private Rigidbody2D playerRb;
 
-    // Reference to HealthBar component
     public HealthBar healthBar;
-
-    // Reference to ExperienceBar component
     public ExperienceBar expBar;
 
+    [Header("Scriptable Objects Reference")]
     public Coins coins;
+    //public CurrentRunStats crs;
+
     private void Start()
     {
         // Set current health equal to max health on start 
         GameManager.instance.currentHealth = GameManager.instance.maxHealth;
         healthBar.SetMaxHealth(GameManager.instance.maxHealth);
         expBar.SetMaxEXP(GameManager.instance.expNeeded);
-
-        // Testing some codes here //
-        //GameManager.instance.currentElementType = GameManager.Elements.Fire;
     }
 
     private void FixedUpdate()

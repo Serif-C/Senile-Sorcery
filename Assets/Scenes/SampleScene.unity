@@ -98314,6 +98314,7 @@ MonoBehaviour:
   healthBar: {fileID: 722121958}
   expBar: {fileID: 1502201171}
   coins: {fileID: 11400000, guid: 2b6ba017e0c9eef4a9eb4a2c89c6429b, type: 2}
+  crs: {fileID: 11400000, guid: 84c6d37a5b0ced748aae4a10c6e6c664, type: 2}
 --- !u!114 &1976954817
 MonoBehaviour:
   m_ObjectHideFlags: 0
