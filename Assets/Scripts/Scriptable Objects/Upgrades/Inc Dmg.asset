@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a885883eb056542adcc4f0030338e8, type: 3}
   m_Name: Inc Dmg
   m_EditorClassIdentifier: 
-  upgradeDescription: Bigger muscles, stronger magic
+  upgradeDescription: Bigger muscles from carrying boats
   upgradeArtwork: {fileID: 21300000, guid: b3f4b88ac21b6b04e9912622fb729812, type: 3}
   upgradeButton: {fileID: 7423859604054657970, guid: ef81d7492956ba24599b71f48abe674a, type: 3}
