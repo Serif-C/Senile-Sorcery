@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fc15d9a89823734fb10c305a2def254, type: 3}
-  m_Name: Skill 2
+  m_Name: Armour 1
   m_EditorClassIdentifier: 
-  name: Armour 2
-  description: Shield
-  artwork: {fileID: 21300000, guid: 03ec89f07077f604bb13bab9c6406a4a, type: 3}
-  currentLevel: 0
-  maxLevel: 5
-  prerequisite:
-  - {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
+  name: Armour 1
+  description: +2b Amr
+  artwork: {fileID: 21300000, guid: d7c34a15782c8614087d636604df6f74, type: 3}
+  currentLevel: 10
+  maxLevel: 10
+  isUnlocked: 1
+  prerequisite: []

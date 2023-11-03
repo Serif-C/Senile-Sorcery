@@ -11,5 +11,6 @@ public class SkillNode : ScriptableObject
     public Sprite artwork;
     public int currentLevel;
     public int maxLevel;
+    public bool isUnlocked;
     public List<SkillNode> prerequisite = new List<SkillNode>();
 }
