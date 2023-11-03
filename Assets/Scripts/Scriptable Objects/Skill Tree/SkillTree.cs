@@ -5,6 +5,7 @@ using UnityEngine;
 public class SkillTree : MonoBehaviour
 {
     public List<SkillNode> allSkillNodes;
+    public GameObject skillDescriptionBox;
 
     private void Update()
     {
@@ -15,10 +16,11 @@ public class SkillTree : MonoBehaviour
     }
     public void IncreaseSkillLevel(SkillNode skill)
     {
-        if(skill.isUnlocked && (skill.currentLevel < skill.maxLevel))
+        skillDescriptionBox.SetActive(true);
+        /*if(skill.isUnlocked && (skill.currentLevel < skill.maxLevel))
         {
             skill.currentLevel++;
-        }
+        }*/
     }
 
     private void UnlockSkill(SkillNode skill)
