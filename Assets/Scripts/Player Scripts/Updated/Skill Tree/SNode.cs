@@ -16,6 +16,7 @@ public class SNode : MonoBehaviour
     public bool skillIsUnlocked;
     public List<SkillNode> skillPrerequisites;
 
+    public bool isSelected;
     private void Update()
     {
         skillName = skillNode.name;

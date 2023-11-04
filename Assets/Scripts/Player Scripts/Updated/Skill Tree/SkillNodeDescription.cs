@@ -10,16 +10,21 @@ public class SkillNodeDescription : MonoBehaviour
 
     public TextMeshProUGUI skillDescription;
 
-    private void Update()
-    {
-        for(int i = 0; i < skillNode.Length; i++)
-        {
-            skillDescription.text = skillNode[i].description;
-        }
-    }
-
     public void CloseWindow()
     {
         gameObject.SetActive(false);
     }
+
+    /*public void IncreaseSkillLevel(SNode node, SkillNode skill)
+    {
+        for(int i = 0; i < skillNode.Length; i++)
+        {
+
+        }
+
+        if (skill.isUnlocked && (skill.currentLevel < skill.maxLevel))
+        {
+            skill.currentLevel++;
+        }
+    }*/
 }

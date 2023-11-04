@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Armour 2
   description: Shield
   artwork: {fileID: 21300000, guid: 03ec89f07077f604bb13bab9c6406a4a, type: 3}
-  currentLevel: 5
+  currentLevel: 0
   maxLevel: 5
   isUnlocked: 1
   prerequisite:

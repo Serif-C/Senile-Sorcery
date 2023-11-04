@@ -15,7 +15,7 @@ MonoBehaviour:
   name: Armour 3
   description: Thorns
   artwork: {fileID: -1190990975, guid: 28a2cb592bf33fe4a93564071cac80ee, type: 3}
-  currentLevel: 5
+  currentLevel: 0
   maxLevel: 5
   isUnlocked: 1
   prerequisite:

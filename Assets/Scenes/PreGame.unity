@@ -595,7 +595,7 @@ RectTransform:
   - {fileID: 1015774986}
   - {fileID: 1670531555}
   m_Father: {fileID: 1632763110}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -648,7 +648,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1632763111}
         m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
-        m_MethodName: IncreaseSkillLevel
+        m_MethodName: DescriptionWindow
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: f2c6fd22596cb6f4ea70e202e8d9eade, type: 2}
@@ -690,7 +690,7 @@ RectTransform:
   - {fileID: 1917136366}
   - {fileID: 426514698}
   m_Father: {fileID: 1632763110}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -743,7 +743,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1632763111}
         m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
-        m_MethodName: IncreaseSkillLevel
+        m_MethodName: DescriptionWindow
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 09363a300da1cb4488162d1070b9cb4c, type: 2}
@@ -783,7 +783,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8446625078880128591}
   - {fileID: 1632763110}
   m_Father: {fileID: 891132991}
   m_RootOrder: 0
@@ -1354,6 +1353,7 @@ MonoBehaviour:
   skillMaxLevel: 0
   skillIsUnlocked: 0
   skillPrerequisites: []
+  isSelected: 0
 --- !u!1 &990061073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,6 +1445,7 @@ MonoBehaviour:
   skillIsUnlocked: 0
   skillPrerequisites:
   - {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
+  isSelected: 0
 --- !u!114 &1015774989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1894,7 +1895,7 @@ RectTransform:
   - {fileID: 946553874}
   - {fileID: 298524338}
   m_Father: {fileID: 1632763110}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1947,7 +1948,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1632763111}
         m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
-        m_MethodName: IncreaseSkillLevel
+        m_MethodName: DescriptionWindow
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
@@ -2377,11 +2378,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8446625078880128591}
   - {fileID: 1227284898}
   - {fileID: 451895578}
   - {fileID: 477956871}
   m_Father: {fileID: 607840053}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2754,6 +2756,7 @@ MonoBehaviour:
   skillPrerequisites:
   - {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
   - {fileID: 11400000, guid: f2c6fd22596cb6f4ea70e202e8d9eade, type: 2}
+  isSelected: 0
 --- !u!114 &1917136368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3644,7 +3647,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8446625078387876224}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1632763111}
+        m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
+        m_MethodName: IncreaseSkillLevel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8446625078880128590}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8446625078387876224
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3914,7 +3929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8446625078880128591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3930,12 +3945,12 @@ RectTransform:
   - {fileID: 8446625078811279493}
   - {fileID: 8446625078387876222}
   - {fileID: 8137243869618516216}
-  m_Father: {fileID: 607840053}
+  m_Father: {fileID: 1632763110}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 500, y: 215}
+  m_AnchoredPosition: {x: 83, y: 49.200012}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &8446625078880128592
@@ -3977,7 +3992,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &8446625078880128594
 Canvas:
   m_ObjectHideFlags: 0
