@@ -658,6 +658,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1632763111}
+        m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
+        m_MethodName: IsSelected
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: f2c6fd22596cb6f4ea70e202e8d9eade, type: 2}
+          m_ObjectArgumentAssemblyTypeName: SkillNode, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &477956870
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,6 +756,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1632763111}
         m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
         m_MethodName: DescriptionWindow
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 09363a300da1cb4488162d1070b9cb4c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: SkillNode, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1632763111}
+        m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
+        m_MethodName: IsSelected
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: 09363a300da1cb4488162d1070b9cb4c, type: 2}
@@ -1347,7 +1371,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillNode: {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
   skillName: 
-  skillDescription: {fileID: 298524339}
+  skillLevelText: {fileID: 298524339}
   skillImage: {fileID: 946553876}
   skillCurrentLevel: 0
   skillMaxLevel: 0
@@ -1438,7 +1462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillNode: {fileID: 11400000, guid: f2c6fd22596cb6f4ea70e202e8d9eade, type: 2}
   skillName: 
-  skillDescription: {fileID: 1670531556}
+  skillLevelText: {fileID: 1670531556}
   skillImage: {fileID: 1015774989}
   skillCurrentLevel: 0
   skillMaxLevel: 0
@@ -1949,6 +1973,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1632763111}
         m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
         m_MethodName: DescriptionWindow
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
+          m_ObjectArgumentAssemblyTypeName: SkillNode, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1632763111}
+        m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
+        m_MethodName: IsSelected
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
@@ -2565,7 +2601,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760301841}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2748,7 +2784,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillNode: {fileID: 11400000, guid: 09363a300da1cb4488162d1070b9cb4c, type: 2}
   skillName: 
-  skillDescription: {fileID: 426514699}
+  skillLevelText: {fileID: 426514699}
   skillImage: {fileID: 1917136368}
   skillCurrentLevel: 0
   skillMaxLevel: 0

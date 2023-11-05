@@ -8,7 +8,7 @@ public class SkillTree : MonoBehaviour
     public GameObject skillDescriptionBox;
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         for(int i = 0; i < allSkillNodes.Count; i++)
         {
@@ -17,7 +17,7 @@ public class SkillTree : MonoBehaviour
     }
     public void DescriptionWindow(SkillNode skill)
     {
-        skill.isSelected = true;
+        //skill.isSelected = true;
 
         skillDescriptionBox.SetActive(true);
         SkillNodeDescription descriptionWindow = skillDescriptionBox.gameObject.GetComponent<SkillNodeDescription>();
@@ -45,5 +45,15 @@ public class SkillTree : MonoBehaviour
             }
         }
         return true;
+    }
+
+    public void IsSelected(SkillNode skill)
+    {
+        if(skill.isSelected == false)
+        {
+            skill.isSelected = true;
+        }
+
+        Debug.Log(skill.name + " is selected: " + skill.isSelected);
     }
 }

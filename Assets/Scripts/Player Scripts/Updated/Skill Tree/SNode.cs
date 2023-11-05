@@ -9,7 +9,7 @@ public class SNode : MonoBehaviour
     public SkillNode skillNode;
 
     public string skillName;
-    public TextMeshProUGUI skillDescription;
+    public TextMeshProUGUI skillLevelText;
     public Image skillImage;
     public int skillCurrentLevel;
     public int skillMaxLevel;
@@ -20,7 +20,7 @@ public class SNode : MonoBehaviour
     private void Update()
     {
         skillName = skillNode.name;
-        skillDescription.text = skillNode.currentLevel.ToString();
+        skillLevelText.text = skillNode.currentLevel.ToString();
         skillImage.sprite = skillNode.artwork;
         skillCurrentLevel = skillNode.currentLevel;
         skillMaxLevel = skillNode.maxLevel;

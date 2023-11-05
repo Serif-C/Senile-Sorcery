@@ -11,39 +11,31 @@ public class SkillNodeDescription : MonoBehaviour
     public TextMeshProUGUI skillDescription;
     public bool isActive = false;
 
-    private int index;
-    private bool canLevelUp;
     private void Update()
     {
-        for(index = 0; index < skillNodes.Length; index++)
-        {
-            SNode node = skillNodes[index].gameObject.GetComponent<SNode>();
-
-            if(node.skillIsSelected == true)
-            {
-                canLevelUp = true;
-            }
-            else
-            {
-                canLevelUp = false;
-            }
-        }
     }
     public void CloseWindow()
     {
-        SNode node = skillNodes[index].gameObject.GetComponent<SNode>();
         gameObject.SetActive(false);
-        node.skillIsSelected = false;
+        for (int index = 0; index < skillNodes.Length; index++)
+        {
+            if (skillNodes[index].GetComponentInChildren<SNode>().skillIsSelected)
+            {
+                skillNodes[index].GetComponentInChildren<SNode>().skillIsSelected = false;
+            }
+        }
     }
 
     public void IncreaseLevel()
     {
-        SNode node = skillNodes[index].gameObject.GetComponent<SNode>();
-        if (canLevelUp == true)
+        for (int index = 0; index < skillNodes.Length; index++)
         {
-            if (node.skillCurrentLevel < node.skillMaxLevel)
+            if (skillNodes[index].GetComponentInChildren<SNode>().skillIsSelected)
             {
-                node.skillCurrentLevel++;
+                if(skillNodes[index].GetComponentInChildren<SNode>().skillCurrentLevel < skillNodes[index].GetComponentInChildren<SNode>().skillMaxLevel)
+                {
+                    skillNodes[index].GetComponentInChildren<SNode>().skillCurrentLevel++;
+                }
             }
         }
     }
