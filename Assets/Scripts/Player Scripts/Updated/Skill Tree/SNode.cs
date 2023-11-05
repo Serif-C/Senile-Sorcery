@@ -16,7 +16,7 @@ public class SNode : MonoBehaviour
     public bool skillIsUnlocked;
     public List<SkillNode> skillPrerequisites;
 
-    public bool isSelected;
+    public bool skillIsSelected;
     private void Update()
     {
         skillName = skillNode.name;
@@ -26,5 +26,6 @@ public class SNode : MonoBehaviour
         skillMaxLevel = skillNode.maxLevel;
         skillIsUnlocked = skillNode.isUnlocked;
         skillPrerequisites = skillNode.prerequisite;
+        skillIsSelected = skillNode.isSelected;
     }
 }

@@ -6,25 +6,45 @@ using UnityEngine.UI;
 
 public class SkillNodeDescription : MonoBehaviour
 {
-    public SkillNode[] skillNode;
+    public GameObject[] skillNodes;
 
     public TextMeshProUGUI skillDescription;
+    public bool isActive = false;
 
+    private int index;
+    private bool canLevelUp;
+    private void Update()
+    {
+        for(index = 0; index < skillNodes.Length; index++)
+        {
+            SNode node = skillNodes[index].gameObject.GetComponent<SNode>();
+
+            if(node.skillIsSelected == true)
+            {
+                canLevelUp = true;
+            }
+            else
+            {
+                canLevelUp = false;
+            }
+        }
+    }
     public void CloseWindow()
     {
+        SNode node = skillNodes[index].gameObject.GetComponent<SNode>();
         gameObject.SetActive(false);
+        node.skillIsSelected = false;
     }
 
-    /*public void IncreaseSkillLevel(SNode node, SkillNode skill)
+    public void IncreaseLevel()
     {
-        for(int i = 0; i < skillNode.Length; i++)
+        SNode node = skillNodes[index].gameObject.GetComponent<SNode>();
+        if (canLevelUp == true)
         {
-
+            if (node.skillCurrentLevel < node.skillMaxLevel)
+            {
+                node.skillCurrentLevel++;
+            }
         }
-
-        if (skill.isUnlocked && (skill.currentLevel < skill.maxLevel))
-        {
-            skill.currentLevel++;
-        }
-    }*/
+    }
 }

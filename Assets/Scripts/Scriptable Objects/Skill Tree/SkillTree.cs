@@ -17,22 +17,18 @@ public class SkillTree : MonoBehaviour
     }
     public void DescriptionWindow(SkillNode skill)
     {
+        skill.isSelected = true;
+
         skillDescriptionBox.SetActive(true);
         SkillNodeDescription descriptionWindow = skillDescriptionBox.gameObject.GetComponent<SkillNodeDescription>();
 
         descriptionWindow.skillDescription.text = skill.description;
     }
 
-    public void IncreaseSkillLevel(GameObject skillDescriptionBox)
-    {
-        
-    }
-
     private void UnlockSkill(SkillNode skill)
     {
         if (CanUnlockSkill(skill))
         {
-            // Logic to unlock the skill
             skill.isUnlocked = true;
             Debug.Log("Skill " + skill.name + " - can be unlocked!");
         }

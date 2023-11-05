@@ -1353,7 +1353,7 @@ MonoBehaviour:
   skillMaxLevel: 0
   skillIsUnlocked: 0
   skillPrerequisites: []
-  isSelected: 0
+  skillIsSelected: 0
 --- !u!1 &990061073
 GameObject:
   m_ObjectHideFlags: 0
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   skillIsUnlocked: 0
   skillPrerequisites:
   - {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
-  isSelected: 0
+  skillIsSelected: 0
 --- !u!114 &1015774989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2756,7 +2756,7 @@ MonoBehaviour:
   skillPrerequisites:
   - {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
   - {fileID: 11400000, guid: f2c6fd22596cb6f4ea70e202e8d9eade, type: 2}
-  isSelected: 0
+  skillIsSelected: 0
 --- !u!114 &1917136368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3648,13 +3648,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1632763111}
-        m_TargetAssemblyTypeName: SkillTree, Assembly-CSharp
-        m_MethodName: IncreaseSkillLevel
-        m_Mode: 2
+      - m_Target: {fileID: 8930681199339733686}
+        m_TargetAssemblyTypeName: SkillNodeDescription, Assembly-CSharp
+        m_MethodName: IncreaseLevel
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 8446625078880128590}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3929,7 +3929,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8446625078880128591
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3992,7 +3992,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!223 &8446625078880128594
 Canvas:
   m_ObjectHideFlags: 0
@@ -4026,8 +4026,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97f7897d18e90cb47a48299617c285f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skillNode:
-  - {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
-  - {fileID: 11400000, guid: f2c6fd22596cb6f4ea70e202e8d9eade, type: 2}
-  - {fileID: 11400000, guid: 09363a300da1cb4488162d1070b9cb4c, type: 2}
+  skillNodes:
+  - {fileID: 1227284897}
+  - {fileID: 451895577}
+  - {fileID: 477956870}
   skillDescription: {fileID: 8446625078840683052}
+  isActive: 0

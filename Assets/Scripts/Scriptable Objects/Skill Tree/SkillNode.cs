@@ -12,5 +12,6 @@ public class SkillNode : ScriptableObject
     public int currentLevel;
     public int maxLevel;
     public bool isUnlocked;
+    public bool isSelected;
     public List<SkillNode> prerequisite = new List<SkillNode>();
 }
