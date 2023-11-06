@@ -8,12 +8,14 @@ public class SkillNodeDescription : MonoBehaviour
 {
     public GameObject[] skillNodes;
 
+    public TextMeshProUGUI skillNameDescription;
     public TextMeshProUGUI skillDescription;
+    public TextMeshProUGUI skillCostDescription;
+
+    public Coins coins;
+
     public bool isActive = false;
 
-    private void Update()
-    {
-    }
     public void CloseWindow()
     {
         gameObject.SetActive(false);
@@ -32,9 +34,13 @@ public class SkillNodeDescription : MonoBehaviour
         {
             if (skillNodes[index].GetComponentInChildren<SNode>().skillNode.isSelected)
             {
-                if(skillNodes[index].GetComponentInChildren<SNode>().skillNode.currentLevel < skillNodes[index].GetComponentInChildren<SNode>().skillNode.maxLevel)
+                if(skillNodes[index].GetComponentInChildren<SNode>().skillNode.isUnlocked && (skillNodes[index].GetComponentInChildren<SNode>().skillNode.currentLevel < skillNodes[index].GetComponentInChildren<SNode>().skillNode.maxLevel))
                 {
-                    skillNodes[index].GetComponentInChildren<SNode>().skillNode.currentLevel++;
+                    if(coins.numOfCoins >= skillNodes[index].GetComponentInChildren<SNode>().skillNode.cost)
+                    {
+                        skillNodes[index].GetComponentInChildren<SNode>().skillNode.currentLevel++;
+                        coins.numOfCoins -= skillNodes[index].GetComponentInChildren<SNode>().skillNode.cost;
+                    }
                 }
             }
         }

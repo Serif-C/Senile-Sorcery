@@ -8,6 +8,7 @@ public class SkillNode : ScriptableObject
 {
     public string name;
     public string description;
+    public int cost;
     public Sprite artwork;
     public int currentLevel;
     public int maxLevel;

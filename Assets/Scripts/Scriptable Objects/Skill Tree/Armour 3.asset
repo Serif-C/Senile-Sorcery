@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Armour 3
   description: Thorns
+  cost: 800
   artwork: {fileID: -1190990975, guid: 28a2cb592bf33fe4a93564071cac80ee, type: 3}
   currentLevel: 0
   maxLevel: 5

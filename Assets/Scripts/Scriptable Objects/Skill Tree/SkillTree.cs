@@ -23,6 +23,8 @@ public class SkillTree : MonoBehaviour
         SkillNodeDescription descriptionWindow = skillDescriptionBox.gameObject.GetComponent<SkillNodeDescription>();
 
         descriptionWindow.skillDescription.text = skill.description;
+        descriptionWindow.skillNameDescription.text = skill.name;
+        descriptionWindow.skillCostDescription.text = skill.cost.ToString();
     }
 
     private void UnlockSkill(SkillNode skill)

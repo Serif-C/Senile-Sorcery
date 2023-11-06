@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Armour 1
   description: +2b Amr
+  cost: 200
   artwork: {fileID: 21300000, guid: d7c34a15782c8614087d636604df6f74, type: 3}
-  currentLevel: 0
+  currentLevel: 10
   maxLevel: 10
   isUnlocked: 1
   isSelected: 0
