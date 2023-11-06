@@ -19,9 +19,9 @@ public class SkillNodeDescription : MonoBehaviour
         gameObject.SetActive(false);
         for (int index = 0; index < skillNodes.Length; index++)
         {
-            if (skillNodes[index].GetComponentInChildren<SNode>().skillIsSelected)
+            if (skillNodes[index].GetComponentInChildren<SNode>().skillNode.isSelected)
             {
-                skillNodes[index].GetComponentInChildren<SNode>().skillIsSelected = false;
+                skillNodes[index].GetComponentInChildren<SNode>().skillNode.isSelected = false;
             }
         }
     }
@@ -30,11 +30,11 @@ public class SkillNodeDescription : MonoBehaviour
     {
         for (int index = 0; index < skillNodes.Length; index++)
         {
-            if (skillNodes[index].GetComponentInChildren<SNode>().skillIsSelected)
+            if (skillNodes[index].GetComponentInChildren<SNode>().skillNode.isSelected)
             {
-                if(skillNodes[index].GetComponentInChildren<SNode>().skillCurrentLevel < skillNodes[index].GetComponentInChildren<SNode>().skillMaxLevel)
+                if(skillNodes[index].GetComponentInChildren<SNode>().skillNode.currentLevel < skillNodes[index].GetComponentInChildren<SNode>().skillNode.maxLevel)
                 {
-                    skillNodes[index].GetComponentInChildren<SNode>().skillCurrentLevel++;
+                    skillNodes[index].GetComponentInChildren<SNode>().skillNode.currentLevel++;
                 }
             }
         }
