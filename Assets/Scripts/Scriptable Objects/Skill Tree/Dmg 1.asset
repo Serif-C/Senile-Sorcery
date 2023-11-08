@@ -10,15 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fc15d9a89823734fb10c305a2def254, type: 3}
-  m_Name: Armour 2
+  m_Name: Dmg 1
   m_EditorClassIdentifier: 
-  name: Armour 2
-  description: Shield
-  cost: 400
-  artwork: {fileID: 21300000, guid: 03ec89f07077f604bb13bab9c6406a4a, type: 3}
-  currentLevel: 0
-  maxLevel: 5
-  isUnlocked: 0
+  name: Damage 1
+  description: +2 Dmg
+  cost: 0
+  artwork: {fileID: 21300000, guid: b3f4b88ac21b6b04e9912622fb729812, type: 3}
+  currentLevel: 7
+  maxLevel: 10
+  isUnlocked: 1
   isSelected: 0
-  prerequisite:
-  - {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
+  prerequisite: []

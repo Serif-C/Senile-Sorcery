@@ -7,6 +7,15 @@ public class Upgrades : MonoBehaviour
     /* After choosing an upgrade (pressing the button) go back to GamePlay State
      * Remove the levelup screen
      * Then change timescale back to 1 (from 0/paused) */
+    public SkillNode skill;
+
+    private int projectileUpgrade;
+    private float armourUpgrade;
+    private float healthUpgrade;
+    private float dmgUpgrade;
+    private int pierceUpgrade;
+
+
     private void LevelUpStateHandler()
     {
         GameManager.instance.ChangeState(GameManager.instance.previousState);
@@ -35,7 +44,12 @@ public class Upgrades : MonoBehaviour
 
     public void IncreaseArmour()
     {
-        float armourIncrease = 2f;
+        if (skill.name.CompareTo("Armour 1") == 0)
+        {
+            armourUpgrade = skill.currentLevel * 2;
+        }
+
+        float armourIncrease = 2f + armourUpgrade;
 
         GameManager.instance.armour += armourIncrease;
         LevelUpStateHandler();

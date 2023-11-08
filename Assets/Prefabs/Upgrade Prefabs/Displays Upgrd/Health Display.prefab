@@ -391,6 +391,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1824930275565184168}
     m_Modifications:
+    - target: {fileID: 139645512598747801, guid: fa1fe556608a2f644ba434029a5cfe1b, type: 3}
+      propertyPath: skill
+      value: 
+      objectReference: {fileID: 11400000, guid: fe8612f8aafd1574198628c380fd1b59, type: 2}
     - target: {fileID: 1729003147406526677, guid: fa1fe556608a2f644ba434029a5cfe1b, type: 3}
       propertyPath: m_Name
       value: Increase Health

@@ -500,6 +500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a28e10c9b6df4374eb3b9b92a7b8375f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  skill: {fileID: 11400000, guid: af3c216337aa7084fa8d8204f93152fc, type: 2}
 --- !u!1 &1925011273336165834
 GameObject:
   m_ObjectHideFlags: 0

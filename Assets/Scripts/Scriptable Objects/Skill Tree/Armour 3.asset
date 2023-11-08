@@ -18,7 +18,7 @@ MonoBehaviour:
   artwork: {fileID: -1190990975, guid: 28a2cb592bf33fe4a93564071cac80ee, type: 3}
   currentLevel: 0
   maxLevel: 5
-  isUnlocked: 0
+  isUnlocked: 1
   isSelected: 0
   prerequisite:
   - {fileID: 11400000, guid: cd533c0674e502c41bf362f7af71967d, type: 2}
