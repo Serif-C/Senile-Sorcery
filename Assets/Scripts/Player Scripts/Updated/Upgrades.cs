@@ -87,6 +87,21 @@ public class Upgrades : MonoBehaviour
         LevelUpStateHandler();
     }
 
+    public void AddExplosion()
+    {
+
+    }
+
+    public void AddShiled()
+    {
+
+    }
+
+    public void AddThrons()
+    {
+
+    }
+
     public void SpawnSword()
     {
         // Spawn 1 sword around the player that deals damage upon contact

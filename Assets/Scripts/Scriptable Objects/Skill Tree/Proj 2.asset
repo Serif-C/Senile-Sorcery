@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fc15d9a89823734fb10c305a2def254, type: 3}
-  m_Name: Health 1
+  m_Name: Proj 2
   m_EditorClassIdentifier: 
-  name: Health 1
-  description: +20 HP
-  cost: 200
-  artwork: {fileID: 21300000, guid: 74473e3bbbc00be41ad45ac8baa20072, type: 3}
-  currentLevel: 6
-  maxLevel: 10
-  isUnlocked: 1
+  name: Projectile 2
+  description: +1 Explosion Radius
+  cost: 1000
+  artwork: {fileID: 0}
+  currentLevel: 0
+  maxLevel: 5
+  isUnlocked: 0
   isSelected: 0
-  prerequisite: []
+  prerequisite:
+  - {fileID: 11400000, guid: f957aad0da8635547bbfb4b9f51e8945, type: 2}
