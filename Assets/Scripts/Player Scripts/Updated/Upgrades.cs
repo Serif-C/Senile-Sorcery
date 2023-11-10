@@ -97,7 +97,7 @@ public class Upgrades : MonoBehaviour
 
     }
 
-    public void AddThrons()
+    public void AddThorns()
     {
 
     }

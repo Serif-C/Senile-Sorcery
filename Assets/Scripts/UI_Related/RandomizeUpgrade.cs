@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class RandomizeUpgrade : MonoBehaviour
 {
-    public GameObject[] upgradeButtonPrefab;
+    public List<GameObject> unlockedUpgrades = new List<GameObject>();
+    public List<GameObject> upgradeList = new List<GameObject>();
     public Transform[] buttonPositions;
 
     private List<int> chosenUpgrades = new List<int>();
 
+    private void Update()
+    {
+        for(int i = 0; i < upgradeList.Count; i++)
+        {
+            if(upgradeList[i].gameObject.GetComponentInChildren<Upgrades>().skill.isUnlocked == true)
+            {
+                // should also check if its already in the unlockedUpgrades list or not
+                unlockedUpgrades.Add(upgradeList[i]);
+                upgradeList.Remove(upgradeList[i]);
+            }
+        }
+    }
     public void ShuffleUpgrades()
     {
         // Clear the list of chosen upgrades before shuffling
@@ -21,12 +34,12 @@ public class RandomizeUpgrade : MonoBehaviour
             // Keep generating a random upgrade until it's not a duplicate
             do
             {
-                randUpgrade = Random.Range(0, upgradeButtonPrefab.Length);
+                randUpgrade = Random.Range(0, unlockedUpgrades.Count);
             }
             while (chosenUpgrades.Contains(randUpgrade));
 
             chosenUpgrades.Add(randUpgrade);
-            Instantiate(upgradeButtonPrefab[randUpgrade], buttonPositions[i]);
+            Instantiate(unlockedUpgrades[randUpgrade], buttonPositions[i]);
         }
     }
 }
