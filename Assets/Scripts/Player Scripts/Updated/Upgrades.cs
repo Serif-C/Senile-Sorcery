@@ -25,8 +25,11 @@ public class Upgrades : MonoBehaviour
 
     public void IncreaseProjectile()
     {
-        
-        int projectileIncrease = 2;
+        if (skill.name.CompareTo("Projectile 1") == 0)
+        {
+            projectileUpgrade = skill.currentLevel * 1;
+        }
+        int projectileIncrease = 1 + projectileUpgrade;
 
         GameManager.instance.projectileCount += projectileIncrease;
         GameManager.instance.projectileSpreadAngle += 10;
@@ -35,7 +38,12 @@ public class Upgrades : MonoBehaviour
 
     public void IncreaseHealth()
     {
-        float healthIncrease = 20f;
+        if(skill.name.CompareTo("Health 1") == 0)
+        {
+            healthUpgrade = skill.currentLevel * 20f;
+        }
+
+        float healthIncrease = 20f + healthUpgrade;
 
         GameManager.instance.currentHealth += healthIncrease;
         GameManager.instance.maxHealth += healthIncrease;
@@ -58,7 +66,11 @@ public class Upgrades : MonoBehaviour
     public void IncreaseDamage()
     {
         // an array of dmg values for higher scaling per pick up might be better?//
-        float dmgIncrease = 10f;
+        if (skill.name.CompareTo("Damage 1") == 0)
+        {
+            dmgUpgrade = skill.currentLevel * 10f;
+        }
+            float dmgIncrease = 10f + dmgUpgrade;
 
         GameManager.instance.dmg += dmgIncrease;
         LevelUpStateHandler();
@@ -67,9 +79,14 @@ public class Upgrades : MonoBehaviour
     public void PiercingProjectile()
     {
         // Should only be able to pierce 1 enemy at lv 1 of this upgrade//
+        if (skill.name.CompareTo("Pierce 1") == 0)
+        {
+            pierceUpgrade = skill.currentLevel * 1;
+        }
 
+        int pierceIncrease = 1 + pierceUpgrade;
         GameManager.instance.canPierce = true;
-        GameManager.instance.numOfPierce++;
+        GameManager.instance.numOfPierce += pierceIncrease;
         LevelUpStateHandler();
     }
 
@@ -114,6 +131,11 @@ public class Upgrades : MonoBehaviour
     }
 
     public void IncreaseMoveSpeed()
+    {
+
+    }
+
+    public void IncreaseExpGain()
     {
 
     }

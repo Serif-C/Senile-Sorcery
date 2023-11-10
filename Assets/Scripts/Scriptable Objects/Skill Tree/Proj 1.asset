@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Projectile 1
   description: +1 Projectile
-  cost: 0
+  cost: 1000
   artwork: {fileID: 21300000, guid: cd8dcb7140ef59445b3fcdd47dff11bb, type: 3}
   currentLevel: 0
-  maxLevel: 10
+  maxLevel: 2
   isUnlocked: 1
   isSelected: 0
   prerequisite: []

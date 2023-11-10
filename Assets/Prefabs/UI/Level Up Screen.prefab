@@ -301,20 +301,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b7a89e4a44c6c04da7fef110d426e0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlockedUpgrades:
-  - {fileID: 1824930275565184183, guid: 6fa86b268a03ac44ab0c448d7816603f, type: 3}
-  - {fileID: 1824930275565184183, guid: 3db033b331d4ef142b8336ecf1770123, type: 3}
-  - {fileID: 1824930275565184183, guid: eb34ba54f22ed7246a04b6b536152199, type: 3}
-  - {fileID: 1824930275565184183, guid: 5a64d2696bbe62c429f23c70adc295c6, type: 3}
-  - {fileID: 1824930275565184183, guid: 64ed350794499e5449a52ff46e877ea2, type: 3}
+  unlockedUpgrades: []
   upgradeList:
   - {fileID: 1824930275565184183, guid: 6fa86b268a03ac44ab0c448d7816603f, type: 3}
-  - {fileID: 1824930275565184183, guid: 3db033b331d4ef142b8336ecf1770123, type: 3}
   - {fileID: 1824930275565184183, guid: eb34ba54f22ed7246a04b6b536152199, type: 3}
   - {fileID: 1824930275565184183, guid: 001ecbfd02d2e9f478329d139a2c77f2, type: 3}
   - {fileID: 1824930275565184183, guid: 5a64d2696bbe62c429f23c70adc295c6, type: 3}
   - {fileID: 1824930275565184183, guid: e83618a4f390ba245964915ca2781493, type: 3}
   - {fileID: 1824930275565184183, guid: 64ed350794499e5449a52ff46e877ea2, type: 3}
+  - {fileID: 1824930275565184183, guid: 3db033b331d4ef142b8336ecf1770123, type: 3}
   buttonPositions:
   - {fileID: 8487401699344402508}
   - {fileID: 8487401699829799138}

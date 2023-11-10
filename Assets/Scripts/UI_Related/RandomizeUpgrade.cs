@@ -10,13 +10,12 @@ public class RandomizeUpgrade : MonoBehaviour
 
     private List<int> chosenUpgrades = new List<int>();
 
-    private void Update()
+    private void AddToList()
     {
         for(int i = 0; i < upgradeList.Count; i++)
         {
             if(upgradeList[i].gameObject.GetComponentInChildren<Upgrades>().skill.isUnlocked == true)
             {
-                // should also check if its already in the unlockedUpgrades list or not
                 unlockedUpgrades.Add(upgradeList[i]);
                 upgradeList.Remove(upgradeList[i]);
             }
@@ -26,7 +25,7 @@ public class RandomizeUpgrade : MonoBehaviour
     {
         // Clear the list of chosen upgrades before shuffling
         chosenUpgrades.Clear();
-
+        AddToList();
         for (int i = 0; i < buttonPositions.Length; i++)
         {
             int randUpgrade;
