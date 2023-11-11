@@ -5,8 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    public void SceneChange(string name)
+    public GameObject[] screens;
+    public void StartGame()
     {
-        SceneManager.LoadScene(name);
+        SceneManager.LoadScene("SampleScene");
+    }
+
+    public void CloseGame()
+    {
+        Application.Quit();
+    }
+
+    public void OpenUpgradeScreen()
+    {
+        screens[0].gameObject.SetActive(true);
     }
 }

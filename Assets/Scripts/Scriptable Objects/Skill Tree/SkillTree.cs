@@ -7,6 +7,7 @@ public class SkillTree : MonoBehaviour
     public List<SkillNode> allSkillNodes;
     public GameObject skillDescriptionBox;
 
+    public GameObject upgradeScreen;
 
     private void FixedUpdate()
     {
@@ -57,5 +58,10 @@ public class SkillTree : MonoBehaviour
         }
 
         Debug.Log(skill.name + " is selected: " + skill.isSelected);
+    }
+
+    public void CloseSkillTree()
+    {
+        upgradeScreen.SetActive(false);
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -35,6 +36,8 @@ public class PlayerStats : MonoBehaviour
         GainHealth();
         LevelUp();
         PickUpCollectibles();
+
+        Die();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -75,6 +78,7 @@ public class PlayerStats : MonoBehaviour
         {
             //play death animation
             //gameover screen
+            SceneManager.LoadScene("PreGame");
         }
     }
 
