@@ -106,7 +106,14 @@ public class Upgrades : MonoBehaviour
 
     public void AddExplosion()
     {
+        if(GameManager.instance.currentElementType != GameManager.Elements.Fire)
+        {
+            GameManager.instance.currentElementType = GameManager.Elements.Fire;
+        }
 
+        GameManager.instance.explosionDmgMultiplier += 0.1f;
+
+        LevelUpStateHandler();
     }
 
     public void AddShiled()

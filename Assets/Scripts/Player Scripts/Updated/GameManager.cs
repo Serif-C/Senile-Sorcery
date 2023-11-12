@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
     public float orbitSpeed = 50f;
     public Elements currentElementType;
     public float explosionRadius = 2f;
-    public float explosionDmgMultiplier = 0.5f;
+    public float explosionDmgMultiplier = 0.3f;
     
 
     // Different states of the game

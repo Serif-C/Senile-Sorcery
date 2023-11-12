@@ -34,6 +34,7 @@ public class PlayerStats : MonoBehaviour
         }
 
         GainHealth();
+        HealthRegen();
         LevelUp();
         PickUpCollectibles();
 
@@ -70,6 +71,24 @@ public class PlayerStats : MonoBehaviour
     {
         healthBar.SetMaxHealth(GameManager.instance.maxHealth);
         healthBar.SetHealth(GameManager.instance.currentHealth);
+    }
+
+    // should use IEnumerator
+    private void HealthRegen()
+    {
+
+        if(GameManager.instance.currentHealth < GameManager.instance.maxHealth)
+        {
+            GameManager.instance.currentHealth += (GameManager.instance.healthRegen * Time.deltaTime) / Time.deltaTime;
+            healthBar.SetHealth(GameManager.instance.currentHealth);
+        }
+
+        // if current hp is >= max hp, set current hp to max hp
+        if(GameManager.instance.currentHealth >= GameManager.instance.maxHealth)
+        {
+            GameManager.instance.currentHealth = GameManager.instance.maxHealth;
+            healthBar.SetHealth(GameManager.instance.currentHealth);
+        }
     }
 
     void Die()
