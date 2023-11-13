@@ -32,7 +32,7 @@ public class Upgrades : MonoBehaviour
         int projectileIncrease = 1 + projectileUpgrade;
 
         GameManager.instance.projectileCount += projectileIncrease;
-        GameManager.instance.projectileSpreadAngle += 10;
+        GameManager.instance.projectileSpreadAngle += (10 * (GameManager.instance.projectileCount / 2));
         LevelUpStateHandler();
     }
 

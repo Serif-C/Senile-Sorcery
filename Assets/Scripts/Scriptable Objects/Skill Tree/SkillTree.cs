@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class SkillTree : MonoBehaviour
 {
@@ -8,9 +9,13 @@ public class SkillTree : MonoBehaviour
     public GameObject skillDescriptionBox;
 
     public GameObject upgradeScreen;
+    public TextMeshProUGUI numOfCoins;
+    public Coins coins;
 
     private void FixedUpdate()
     {
+        numOfCoins.text = coins.numOfCoins.ToString();
+
         for(int i = 0; i < allSkillNodes.Count; i++)
         {
             UnlockSkill(allSkillNodes[i]);

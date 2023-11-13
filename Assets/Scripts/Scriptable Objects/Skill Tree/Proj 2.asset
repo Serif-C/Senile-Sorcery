@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Projectile 2
   description: +1 Explosion Radius
-  cost: 1000
+  cost: 1500
   artwork: {fileID: 0}
   currentLevel: 0
   maxLevel: 5
