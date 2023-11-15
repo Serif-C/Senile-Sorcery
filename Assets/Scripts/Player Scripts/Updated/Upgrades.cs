@@ -12,6 +12,7 @@ public class Upgrades : MonoBehaviour
     private int projectileUpgrade;
     private float armourUpgrade;
     private float healthUpgrade;
+    private float health2Upgrade;
     private float dmgUpgrade;
     private int pierceUpgrade;
 
@@ -98,14 +99,19 @@ public class Upgrades : MonoBehaviour
 
     public void AddHealthRegen()
     {
-        // Additional health regen on subsequent pickups//
-        // an array of dmg values for higher scaling per pick up might be better?//
-        GameManager.instance.healthRegen += 1;
+        if (skill.name.CompareTo("Health 2") == 0)
+        {
+            health2Upgrade = skill.currentLevel * 1;
+        }
+
+        GameManager.instance.healthRegen += (1 + health2Upgrade);
         LevelUpStateHandler();
     }
 
     public void AddExplosion()
     {
+        GameManager.instance.canPierce = false;
+
         if(GameManager.instance.currentElementType != GameManager.Elements.Fire)
         {
             GameManager.instance.currentElementType = GameManager.Elements.Fire;

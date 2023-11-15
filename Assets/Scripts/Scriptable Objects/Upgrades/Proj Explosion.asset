@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45a885883eb056542adcc4f0030338e8, type: 3}
   m_Name: Proj Explosion
   m_EditorClassIdentifier: 
-  upgradeDescription: 
-  upgradeArtwork: {fileID: 0}
+  upgradeDescription: Projectiles explodes
+  upgradeArtwork: {fileID: 21300000, guid: e273844e682f86d4089e5f37c6042a90, type: 3}
   upgradeButton: {fileID: 0}

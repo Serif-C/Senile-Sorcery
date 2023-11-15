@@ -43,7 +43,6 @@ public class BulletDmg : MonoBehaviour
                     // explode upon colliding with an enemy, damages everything in the radius
                     // turns off pierce cuz thats probably too strong
 
-                    GameManager.instance.canPierce = false;
                     fireExplosion();
                     Instantiate(explosionPrefab, transform.position, Quaternion.identity);
                 }

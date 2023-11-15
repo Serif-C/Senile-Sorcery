@@ -14,6 +14,9 @@ public class PlayerStats : MonoBehaviour
     public Coins coins;
     //public CurrentRunStats crs;
 
+    private float hpRegenCD = 0f;
+    private float hpRegenCDStart = 1f;
+
     private void Start()
     {
         // Set current health equal to max health on start 
@@ -25,6 +28,10 @@ public class PlayerStats : MonoBehaviour
     private void FixedUpdate()
     {
         GainExp();
+        GainHealth();
+        LevelUp();
+        PickUpCollectibles();
+        Die();
 
         // Ensure shoot rate never becomes faster than the limit
         // Rounds up/down startShootCoolDown to shootRateLimit
@@ -33,12 +40,16 @@ public class PlayerStats : MonoBehaviour
             GameManager.instance.startShootCoolDown = GameManager.instance.shootRateLimit;
         }
 
-        GainHealth();
-        HealthRegen();
-        LevelUp();
-        PickUpCollectibles();
+        if(hpRegenCD <= 0f)
+        {
+            HealthRegen();
+            hpRegenCD = hpRegenCDStart;
+        }
+        else
+        {
+            hpRegenCD -= Time.deltaTime;
+        }
 
-        Die();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -79,7 +90,7 @@ public class PlayerStats : MonoBehaviour
 
         if(GameManager.instance.currentHealth < GameManager.instance.maxHealth)
         {
-            GameManager.instance.currentHealth += (GameManager.instance.healthRegen * Time.deltaTime) / Time.deltaTime;
+            GameManager.instance.currentHealth += GameManager.instance.healthRegen;
             healthBar.SetHealth(GameManager.instance.currentHealth);
         }
 

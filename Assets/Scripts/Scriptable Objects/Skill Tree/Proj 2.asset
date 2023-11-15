@@ -15,10 +15,10 @@ MonoBehaviour:
   name: Projectile 2
   description: +1 Explosion Radius
   cost: 1500
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: e273844e682f86d4089e5f37c6042a90, type: 3}
   currentLevel: 0
   maxLevel: 5
-  isUnlocked: 0
+  isUnlocked: 1
   isSelected: 0
   prerequisite:
   - {fileID: 11400000, guid: f957aad0da8635547bbfb4b9f51e8945, type: 2}

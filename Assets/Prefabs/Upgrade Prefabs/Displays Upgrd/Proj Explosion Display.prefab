@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrade: {fileID: 11400000, guid: 705875fa0d8da0346905790616b89c40, type: 2}
-  upgradeDescription: {fileID: 1925011273336165832}
+  upgradeDescription: {fileID: 1824930275783359178}
   upgradeArtwork: {fileID: 799794085859057273}
   upgradeButton: {fileID: 1925011272138132619}
 --- !u!1 &1824930275783359176
@@ -478,7 +478,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 916968940695240393}
         m_TargetAssemblyTypeName: Upgrades, Assembly-CSharp
-        m_MethodName: IncreaseProjectile
+        m_MethodName: AddExplosion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgrade: {fileID: 11400000, guid: ff79af30e48bf364f955c17ff155f9ae, type: 2}
-  upgradeDescription: {fileID: 1925011273336165832}
+  upgradeDescription: {fileID: 1824930275783359178}
   upgradeArtwork: {fileID: 799794085859057273}
   upgradeButton: {fileID: 1925011272138132619}
 --- !u!1 &1824930275783359176

@@ -16,7 +16,7 @@ MonoBehaviour:
   description: +20 HP
   cost: 200
   artwork: {fileID: 21300000, guid: 74473e3bbbc00be41ad45ac8baa20072, type: 3}
-  currentLevel: 0
+  currentLevel: 10
   maxLevel: 10
   isUnlocked: 1
   isSelected: 0
