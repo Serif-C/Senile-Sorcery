@@ -91,6 +91,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject); // to preserve player stats and data between scenes (floors)
         }
         else
         {
@@ -98,6 +99,7 @@ public class GameManager : MonoBehaviour
         }
 
         DisableScreens();
+        ResetPlayerStats();
     }
 
     private void Update()
@@ -235,5 +237,34 @@ public class GameManager : MonoBehaviour
             statusScreen.SetActive(false);
             Time.timeScale = 1f;
         }
+    }
+
+    public void ResetPlayerStats()
+    {
+        // player stats and data are set back to default value after the current run has ended
+        // eg. dying or beating the final boss
+        maxHealth = 100f;
+        currentHealth = maxHealth;
+        healthRegen = 0f;
+        dmg = 50f;
+        dmgDealt = 0f;
+        armour = 1f;
+        critChance = 0f;
+        critDmg = 1.5f;
+        lvl = 1;
+        currentExp = 0f;
+        expNeeded = 1000f;
+        shootCoolDown = 2f;
+        startShootCoolDown = 1f;
+        shootRate = 0f; // The amount subtracted to startShootCoolDown per level (for now)
+        shootRateLimit = 0.05f;
+        projectileCount = 1;
+        projectileSpreadAngle = 20;
+        canPierce = false;
+        numOfPierce = 0;
+
+        elapsedTime = 0f;
+        minutes = 0;
+        seconds = 0;
     }
 }

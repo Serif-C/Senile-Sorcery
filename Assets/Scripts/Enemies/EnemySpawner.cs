@@ -13,7 +13,6 @@ public class EnemySpawner : MonoBehaviour
     public float startSpawnCD;  //Start the cooldown back up
     public float spawnRate;  //Decrease spawn rate the longer the game goes 
     public float maxSpawnRate;
-    private float minTime = 0.5f;
     public int maxEnemies;
 
     private void Start()
@@ -47,6 +46,20 @@ public class EnemySpawner : MonoBehaviour
             else
             {
                 spawnCD -= Time.deltaTime;
+            }
+        }
+
+        for(int i = 0; i < bosses.Length; i++)
+        {
+            int numOfDeadBosses = 0;
+            if(bosses[i].gameObject.GetComponent<Enemy>().isDead == true)
+            {
+                numOfDeadBosses++;
+                if(numOfDeadBosses == bosses.Length)
+                {
+                    gameObject.SetActive(false);
+                    Debug.Log("Boss has been killed, no longer spawning enemies");
+                }
             }
         }
     }
