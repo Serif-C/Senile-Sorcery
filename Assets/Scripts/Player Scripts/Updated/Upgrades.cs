@@ -15,6 +15,7 @@ public class Upgrades : MonoBehaviour
     private float health2Upgrade;
     private float dmgUpgrade;
     private int pierceUpgrade;
+    private float explodeUpgrade;
 
 
     private void LevelUpStateHandler()
@@ -112,12 +113,18 @@ public class Upgrades : MonoBehaviour
     {
         GameManager.instance.canPierce = false;
 
+        if(skill.name.CompareTo("Projectile 2") == 0)
+        {
+            explodeUpgrade = skill.currentLevel * 0.5f;
+        }
+
         if(GameManager.instance.currentElementType != GameManager.Elements.Fire)
         {
             GameManager.instance.currentElementType = GameManager.Elements.Fire;
         }
 
         GameManager.instance.explosionDmgMultiplier += 0.1f;
+        GameManager.instance.explosionRadius += explodeUpgrade;
 
         LevelUpStateHandler();
     }
