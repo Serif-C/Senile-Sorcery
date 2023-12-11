@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dmg 1
   m_EditorClassIdentifier: 
   name: Damage 1
-  description: +10 Dmg
+  description: +10 Dmg on matching card
   cost: 250
   artwork: {fileID: 21300000, guid: b3f4b88ac21b6b04e9912622fb729812, type: 3}
   currentLevel: 0
