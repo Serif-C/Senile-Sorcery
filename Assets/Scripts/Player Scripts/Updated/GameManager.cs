@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public bool hasReset = false;
 
     [Header("Non-Combat Related Stats")]
     public float collectRange = 1f;
@@ -99,7 +100,11 @@ public class GameManager : MonoBehaviour
         }
 
         DisableScreens();
-        ResetGameStats();
+    }
+
+    private void Start()
+    {
+        
     }
 
     private void Update()
@@ -266,5 +271,11 @@ public class GameManager : MonoBehaviour
         elapsedTime = 0f;
         minutes = 0;
         seconds = 0;
+
+        numOfEnemies = 0;
+        initialMaxNumOfEnemies = 15;
+        currentMaxNumOfEnemies = 0;
+
+        hasReset = false;
     }
 }
