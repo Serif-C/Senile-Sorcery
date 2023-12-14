@@ -108,6 +108,9 @@ public class PlayerStats : MonoBehaviour
         {
             //play death animation
             //gameover screen
+
+            GameManager.instance.ResetGameStats();
+
             SceneManager.LoadScene("PreGame");
         }
     }

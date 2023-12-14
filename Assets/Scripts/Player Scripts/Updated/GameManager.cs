@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
         }
 
         DisableScreens();
-        ResetPlayerStats();
+        ResetGameStats();
     }
 
     private void Update()
@@ -239,7 +239,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ResetPlayerStats()
+    public void ResetGameStats()
     {
         // player stats and data are set back to default value after the current run has ended
         // eg. dying or beating the final boss
