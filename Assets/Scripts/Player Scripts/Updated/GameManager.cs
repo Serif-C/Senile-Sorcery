@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -92,7 +93,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject); // to preserve player stats and data between scenes (floors)
+            //DontDestroyOnLoad(gameObject); // to preserve player stats and data between scenes (floors)
         }
         else
         {
@@ -102,13 +103,13 @@ public class GameManager : MonoBehaviour
         DisableScreens();
     }
 
-    private void Start()
-    {
-        
-    }
-
     private void Update()
     {
+        if(currentHealth <= 0)
+        {
+            UnloadScene();
+        }
+
         // Ensure shoot rate never becomes faster than the limit
         // Rounds up/down startShootCoolDown to shootRateLimit
         if (startShootCoolDown <= shootRateLimit)
@@ -244,6 +245,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // DONT NEED THIS CODE LOL! //
     public void ResetGameStats()
     {
         // player stats and data are set back to default value after the current run has ended
@@ -261,7 +263,7 @@ public class GameManager : MonoBehaviour
         expNeeded = 1000f;
         shootCoolDown = 2f;
         startShootCoolDown = 1f;
-        shootRate = 0f; // The amount subtracted to startShootCoolDown per level (for now)
+        shootRate = 0f;
         shootRateLimit = 0.05f;
         projectileCount = 1;
         projectileSpreadAngle = 20;
@@ -277,5 +279,10 @@ public class GameManager : MonoBehaviour
         currentMaxNumOfEnemies = 0;
 
         hasReset = false;
+    }
+
+    private void UnloadScene()
+    {
+        SceneManager.UnloadSceneAsync("SampleScene");
     }
 }
