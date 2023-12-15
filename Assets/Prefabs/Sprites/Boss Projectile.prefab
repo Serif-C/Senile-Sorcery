@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6526522045659440949}
   - component: {fileID: -2771167035124857539}
   m_Layer: 0
-  m_Name: Enemy_Projectile
+  m_Name: Boss Projectile
   m_TagString: PlayerBullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 3544530603540488248}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -104,14 +104,14 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.273
-  m_Color: {r: 0.90588236, g: 0.14901961, b: 0.23529412, a: 1}
+  m_Color: {r: 1, g: 0.02738041, b: 0, a: 1}
   m_Intensity: 2
   m_LightVolumeIntensity: 1.75
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
+  m_LightOrder: 1
   m_AlphaBlendOnOverlap: 0
   m_OverlapOperation: 0
   m_NormalMapDistance: 3
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 0.23
+  m_PointLightOuterRadius: 0.6
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -221,3 +221,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2984414162313989647, guid: 67ec4b5c0115f5b478f629aaa10aeb6c, type: 3}
+  particle: {fileID: 1720042217434244747, guid: 8dc3d93af1db8a645b3fb30741cda438, type: 3}

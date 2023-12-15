@@ -9,6 +9,8 @@ public class EnemyBulletDmg : MonoBehaviour
     private Vector2 bulletStarPoint;
     private Vector2 bulletCurrentPosition;
 
+    public GameObject particle;
+
     private void Start()
     {
         bulletStarPoint = gameObject.transform.position;
@@ -25,6 +27,7 @@ public class EnemyBulletDmg : MonoBehaviour
         PlayerStats player = collision.gameObject.GetComponent<PlayerStats>();
         if(player != null)
         {
+            Instantiate(particle, transform.position, Quaternion.identity);
             player.TakeDmg(enemy);
             Destroy(gameObject);
         }

@@ -56,7 +56,7 @@ public class Upgrades : MonoBehaviour
     {
         if (skill.name.CompareTo("Armour 1") == 0)
         {
-            armourUpgrade = skill.currentLevel * 2;
+            armourUpgrade = skill.currentLevel * 0.2f;
         }
 
         float armourIncrease = 2f + armourUpgrade;
@@ -115,7 +115,7 @@ public class Upgrades : MonoBehaviour
 
         if(skill.name.CompareTo("Projectile 2") == 0)
         {
-            explodeUpgrade = skill.currentLevel * 0.5f;
+            explodeUpgrade = skill.currentLevel * 0.25f;
         }
 
         if(GameManager.instance.currentElementType != GameManager.Elements.Fire)

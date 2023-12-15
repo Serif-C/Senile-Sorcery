@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Armour 1
   m_EditorClassIdentifier: 
   name: Armour 1
-  description: +2 Armour on matching card
+  description: +0.2 Armour on matching card
   cost: 200
   artwork: {fileID: 21300000, guid: d7c34a15782c8614087d636604df6f74, type: 3}
   currentLevel: 0

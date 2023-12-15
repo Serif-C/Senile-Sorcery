@@ -11,6 +11,7 @@ public class BulletDmg : MonoBehaviour
     private int numOfEnemyPierced = 0;
 
     public GameObject explosionPrefab;
+    public GameObject normalBulletParticle;
 
     private void Start()
     {
@@ -33,6 +34,7 @@ public class BulletDmg : MonoBehaviour
 
         if(enemy != null)
         {
+            Instantiate(normalBulletParticle, transform.position, Quaternion.identity);
             enemy.EnemyTakeDmg(playerBulletDmg);
 
             // Might be a good idea to use switch statements for these!
