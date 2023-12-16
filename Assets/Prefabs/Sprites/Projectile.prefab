@@ -222,3 +222,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 1823217443701009628, guid: 0a670623fa0a04a40b8c4b163f47a9b0, type: 3}
   normalBulletParticle: {fileID: 823428353206689916, guid: ec50627bdca6ded40993ec2cf932c62e, type: 3}
+  sfx: {fileID: 0}

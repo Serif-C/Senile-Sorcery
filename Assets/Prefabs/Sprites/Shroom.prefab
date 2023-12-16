@@ -152,6 +152,7 @@ MonoBehaviour:
   isEnemyMelee: 0
   damagePopUpPrefab: {fileID: 7972551977725614891, guid: 21e84bbbd3cae4842b9e641a8d78243b, type: 3}
   coinPrefab: {fileID: 6961998617827653391, guid: 88157972013f41c4ba8c0817eaf7b56a, type: 3}
+  deathFX: {fileID: 4532401831756353674, guid: 35a40bdce10070b448f449526e689099, type: 3}
 --- !u!95 &5475660302044632116
 Animator:
   serializedVersion: 5

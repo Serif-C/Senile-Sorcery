@@ -31,6 +31,7 @@ public class Enemy : MonoBehaviour
 
     public GameObject damagePopUpPrefab;
     public GameObject coinPrefab;
+    public GameObject deathFX;
 
     private void Start()
     {
@@ -102,7 +103,7 @@ public class Enemy : MonoBehaviour
 
     public void EnemyTakeDmg(float dmg)
     {
-        if(dmg >= armour)
+        if (dmg >= armour)
         {
             dmg -= armour;
         }
@@ -128,6 +129,7 @@ public class Enemy : MonoBehaviour
     {
         if (currentHealth <= 0)
         {
+            Instantiate(deathFX, transform.position, Quaternion.identity);
             // destroy this game object
             isDead = true;
             int random = Random.Range(1, 11);

@@ -26,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
         GameManager.instance.currentMaxNumOfEnemies = maxEnemies;
         if (GameManager.instance.numOfEnemies < maxEnemies)
         {
-            if (spawnCD <= 0f)
+            if (spawnCD < 0f)
             {
                 SpawnEnemy();
                 spawnCD = startSpawnCD;
@@ -74,8 +74,6 @@ public class EnemySpawner : MonoBehaviour
             Instantiate(enemy[0], spawnPoints[rand].transform);
             GameManager.instance.numOfEnemies++;
         }
-        /*else if (GameManager.instance.minutes >= 1 && GameManager.instance.minutes < 2)*/ 
-        // for when there are more than 2 types of enemies
         else
         {
             Instantiate(enemy[enemyRand], spawnPoints[rand].transform);
