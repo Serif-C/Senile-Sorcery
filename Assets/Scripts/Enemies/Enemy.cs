@@ -32,6 +32,7 @@ public class Enemy : MonoBehaviour
     public GameObject damagePopUpPrefab;
     public GameObject coinPrefab;
     public GameObject deathFX;
+    public AudioSource dmgSFX;
 
     private void Start()
     {
@@ -115,6 +116,7 @@ public class Enemy : MonoBehaviour
         GameManager.instance.dmgDealt = dmg;
         enemyHealthBar.SetHealth(currentHealth);
         Instantiate(damagePopUpPrefab, transform.position, Quaternion.identity);
+        dmgSFX.Play();
     }
 
     public void EnemyHitByExplosion(float dmg)
