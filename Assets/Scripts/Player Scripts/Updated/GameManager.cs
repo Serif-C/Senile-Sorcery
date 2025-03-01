@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
     [Header("Spawner")]
     public int numOfEnemies = 0;
     public int initialMaxNumOfEnemies = 15;
-    public int currentMaxNumOfEnemies = 0;
+    public int currentMaxNumOfEnemies = 15;
 
     // Store current state of the game
     [Header("Game States")]

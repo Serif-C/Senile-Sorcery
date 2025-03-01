@@ -22,17 +22,15 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        maxEnemies = GameManager.instance.initialMaxNumOfEnemies + (GameManager.instance.minutes * 50);
-        GameManager.instance.currentMaxNumOfEnemies = maxEnemies;
-        if (GameManager.instance.numOfEnemies < maxEnemies)
+        if (GameManager.instance.numOfEnemies < GameManager.instance.currentMaxNumOfEnemies)
         {
-            if (spawnCD < 0f)
+            if (spawnCD <= 0.01f)
             {
                 SpawnEnemy();
                 spawnCD = startSpawnCD;
 
                 // decrease spawn cd
-                if(startSpawnCD >= maxSpawnRate)
+                if (startSpawnCD >= maxSpawnRate)
                 {
                     startSpawnCD -= spawnRate;
                 }
@@ -41,7 +39,7 @@ public class EnemySpawner : MonoBehaviour
                 {
                     startSpawnCD = spawnRate;
                 }
-                
+
             }
             else
             {
