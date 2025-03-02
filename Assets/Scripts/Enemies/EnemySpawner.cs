@@ -13,10 +13,14 @@ public class EnemySpawner : MonoBehaviour
     public float startSpawnCD;  //Start the cooldown back up
     public float spawnRate;  //Decrease spawn rate the longer the game goes 
     public float maxSpawnRate;
+    public float spawnRateDecay = 0.1f;
     public int maxEnemies;
+
+    private float elapsedTime = 0f;
 
     private void Start()
     {
+        spawnCD = startSpawnCD;
         StartCoroutine(SpawnBoss(30));
     }
 
@@ -24,22 +28,23 @@ public class EnemySpawner : MonoBehaviour
     {
         if (GameManager.instance.numOfEnemies < GameManager.instance.currentMaxNumOfEnemies)
         {
-            if (spawnCD <= 0.01f)
+            if (spawnCD <= 0f)
             {
                 SpawnEnemy();
                 spawnCD = startSpawnCD;
 
                 // decrease spawn cd
-                if (startSpawnCD >= maxSpawnRate)
+                if (startSpawnCD > maxSpawnRate)
                 {
                     startSpawnCD -= spawnRate;
+                    startSpawnCD = CalculateSpawnCooldown();
+                    Debug.Log($"[{elapsedTime:F2}s] Enemy spawned! spawnCD: {spawnCD}, startSpawnCD: {startSpawnCD}");
                 }
-                // keep startSpawnCD equal to spawn rate when it has reach maxSpawnRate
-                else
-                {
-                    startSpawnCD = spawnRate;
-                }
-
+                //// keep startSpawnCD equal to spawn rate when it has reach maxSpawnRate
+                //else
+                //{
+                //    startSpawnCD = spawnRate;
+                //}
             }
             else
             {
@@ -70,14 +75,21 @@ public class EnemySpawner : MonoBehaviour
         if(GameManager.instance.minutes < 1)
         {
             Instantiate(enemy[0], spawnPoints[rand].transform);
-            GameManager.instance.numOfEnemies++;
+            //GameManager.instance.numOfEnemies++;
         }
         else
         {
             Instantiate(enemy[enemyRand], spawnPoints[rand].transform);
-            GameManager.instance.numOfEnemies++;
+            //GameManager.instance.numOfEnemies++;
         }
+        GameManager.instance.numOfEnemies++;
+    }
 
+    private float CalculateSpawnCooldown()
+    {
+        // Formula: startSpawnCD * exp(-decay * elapsedTime)
+        float newSpawnCD = startSpawnCD * Mathf.Exp(-spawnRateDecay * elapsedTime);
+        return Mathf.Max(newSpawnCD, maxSpawnRate); // Ensure it never goes below 0.05s
     }
 
     private void TestingBossSpawn()

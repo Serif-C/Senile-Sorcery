@@ -73,7 +73,7 @@ public class Enemy : MonoBehaviour
             DoRangedEnemyThings();
         }
 
-        enemyDie();
+        //enemyDie();
     }
 
     void DoEnemyThings()
@@ -117,6 +117,11 @@ public class Enemy : MonoBehaviour
         enemyHealthBar.SetHealth(currentHealth);
         Instantiate(damagePopUpPrefab, transform.position, Quaternion.identity);
         dmgSFX.Play();
+
+        if (currentHealth <= 0)
+        {
+            enemyDie();
+        }
     }
 
     public void EnemyHitByExplosion(float dmg)
@@ -129,16 +134,28 @@ public class Enemy : MonoBehaviour
 
     public void enemyDie()
     {
-        if (currentHealth <= 0)
-        {
-            Instantiate(deathFX, transform.position, Quaternion.identity);
-            // destroy this game object
-            isDead = true;
-            int random = Random.Range(1, 11);
-            if(random == 1)
-            {
-                Instantiate(coinPrefab, transform.position, Quaternion.identity);
-            }
-        }
+        //if (currentHealth <= 0)
+        //{
+        //    Instantiate(deathFX, transform.position, Quaternion.identity);
+        //    // destroy this game object
+        //    isDead = true;
+        //    int random = Random.Range(1, 11);
+        //    if(random == 1)
+        //    {
+        //        Instantiate(coinPrefab, transform.position, Quaternion.identity);
+        //    }
+        //}
+        if (isDead) return; // Prevent multiple executions
+
+        isDead = true; // Mark as dead
+
+        Instantiate(deathFX, transform.position, Quaternion.identity);
+
+        // Reduce enemy count properly
+        GameManager.instance.numOfEnemies--;
+
+        Debug.Log($"Enemy {gameObject.name} destroyed. Remaining enemies: {GameManager.instance.numOfEnemies}");
+
+        Destroy(gameObject); // Immediately destroy this enemy object
     }
 }

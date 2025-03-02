@@ -5334,6 +5334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 951043153}
   - component: {fileID: 951043152}
+  - component: {fileID: 951043154}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -5348,7 +5349,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951043151}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 19209c65c6eb3b1488bed875edfd1bbc, type: 3}
   m_Name: 
@@ -5377,16 +5378,13 @@ MonoBehaviour:
   - {fileID: 368449050}
   enemy:
   - {fileID: 934154776090165922, guid: 756a5fbc45bc7ba49a8909c7a1c191e7, type: 3}
-  - {fileID: 934154776090165922, guid: 756a5fbc45bc7ba49a8909c7a1c191e7, type: 3}
-  - {fileID: 934154776090165922, guid: 756a5fbc45bc7ba49a8909c7a1c191e7, type: 3}
-  - {fileID: 934154776090165922, guid: 756a5fbc45bc7ba49a8909c7a1c191e7, type: 3}
-  - {fileID: 934154776090165922, guid: 756a5fbc45bc7ba49a8909c7a1c191e7, type: 3}
   - {fileID: 2984414162313989647, guid: 67ec4b5c0115f5b478f629aaa10aeb6c, type: 3}
   bosses:
   - {fileID: 5475660302044632117, guid: 41cc0008bb5d2b04aa13f6a6e5aa5516, type: 3}
-  startSpawnCD: 0.5
+  startSpawnCD: 2
   spawnRate: 0.05
   maxSpawnRate: 0.01
+  spawnRateDecay: 0.1
   maxEnemies: 0
 --- !u!4 &951043153
 Transform:
@@ -5424,6 +5422,54 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &951043154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951043151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c209f7d6bae5443b85da15c806798f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoints:
+  - {fileID: 1623427218}
+  - {fileID: 394105720}
+  - {fileID: 40701719}
+  - {fileID: 739898861}
+  - {fileID: 1456504301}
+  - {fileID: 1401475499}
+  - {fileID: 686867804}
+  - {fileID: 435972587}
+  - {fileID: 428055500}
+  - {fileID: 1565838075}
+  - {fileID: 2066305674}
+  - {fileID: 2127545881}
+  - {fileID: 803043780}
+  - {fileID: 1253940424}
+  - {fileID: 371357730}
+  - {fileID: 499745119}
+  - {fileID: 114059554}
+  - {fileID: 598736267}
+  - {fileID: 481491534}
+  - {fileID: 2091710018}
+  - {fileID: 368449050}
+  enemyTypes:
+  - {fileID: 934154776090165922, guid: 756a5fbc45bc7ba49a8909c7a1c191e7, type: 3}
+  - {fileID: 2984414162313989647, guid: 67ec4b5c0115f5b478f629aaa10aeb6c, type: 3}
+  - {fileID: 934154776090165922, guid: 756a5fbc45bc7ba49a8909c7a1c191e7, type: 3}
+  - {fileID: 934154776090165922, guid: 756a5fbc45bc7ba49a8909c7a1c191e7, type: 3}
+  - {fileID: 934154776090165922, guid: 756a5fbc45bc7ba49a8909c7a1c191e7, type: 3}
+  - {fileID: 934154776090165922, guid: 756a5fbc45bc7ba49a8909c7a1c191e7, type: 3}
+  - {fileID: 934154776090165922, guid: 756a5fbc45bc7ba49a8909c7a1c191e7, type: 3}
+  bossTypes:
+  - {fileID: 5475660302044632117, guid: 41cc0008bb5d2b04aa13f6a6e5aa5516, type: 3}
+  initialSpawnCooldown: 5
+  minSpawnCooldown: 0.05
+  spawnAcceleration: 0.1
+  bossSpawnInterval: 30
 --- !u!1001 &1093577863
 PrefabInstance:
   m_ObjectHideFlags: 0
