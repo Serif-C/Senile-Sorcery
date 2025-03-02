@@ -188,9 +188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15cfd4a8f2ca4fb4d9067ebc43cff21c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expReward: 500
-  enemy: {fileID: 934154776090165922}
+  expReward: 1000
   hasGivenExp: 0
+  enemy: {fileID: 934154776090165922}
 --- !u!114 &389951464856402567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ MonoBehaviour:
   - {x: 1, y: -0.6875, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 76686
+  m_InstanceId: 68112
 --- !u!82 &9126396586262217253
 AudioSource:
   m_ObjectHideFlags: 0

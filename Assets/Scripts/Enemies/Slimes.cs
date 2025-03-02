@@ -4,44 +4,28 @@ using UnityEngine;
 
 public class Slimes : MonoBehaviour
 {
-    // Exp Reward by slime enemies
-    // Item Drops by slime enemies
-    // Dmg Multiplier (to be used by Enemy script)
-    // Amour Multiplier (to be used by Enemy script)
-
     public float expReward = 500f;
-
-    // Reference to Enemy component
-    public Enemy enemy;
-
     public bool hasGivenExp = false;
-
+    public Enemy enemy;
     private void Start()
     {
         enemy.isEnemyMelee = true;
     }
 
-    private void Update()
+
+    // Called when enemyDie() executes
+    public void OnEnemyDeath()
     {
-        if(enemy.isDead == true && !hasGivenExp)
+        if (!hasGivenExp)
         {
-            addEXP(expReward);
             hasGivenExp = true;
-            StartCoroutine(DestroyAfterDelay());
+            addEXP(expReward);
         }
     }
 
-    // should drop exp shards instead
     void addEXP(float exp)
     {
         GameManager.instance.currentExp += exp;
-    }
-
-    private IEnumerator DestroyAfterDelay()
-    {
-        // Wait for a short delay before destroying the enemy object
-        yield return 0.02f;
-        GameManager.instance.numOfEnemies -= 1;
-        Destroy(enemy.gameObject);
+        Debug.Log($"EXP +{expReward} from {gameObject.name}");
     }
 }

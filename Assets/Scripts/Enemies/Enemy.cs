@@ -134,20 +134,25 @@ public class Enemy : MonoBehaviour
 
     public void enemyDie()
     {
-        //if (currentHealth <= 0)
-        //{
-        //    Instantiate(deathFX, transform.position, Quaternion.identity);
-        //    // destroy this game object
-        //    isDead = true;
-        //    int random = Random.Range(1, 11);
-        //    if(random == 1)
-        //    {
-        //        Instantiate(coinPrefab, transform.position, Quaternion.identity);
-        //    }
-        //}
+        //if (isDead) return; // Prevent multiple executions
+
+        //isDead = true; // Mark as dead
+
+        //Instantiate(deathFX, transform.position, Quaternion.identity);
+
+        //// Reduce enemy count properly
+        //GameManager.instance.numOfEnemies--;
+
+        //Debug.Log($"Enemy {gameObject.name} destroyed. Remaining enemies: {GameManager.instance.numOfEnemies}");
+
+        //Destroy(gameObject); // Immediately destroy this enemy object
+
         if (isDead) return; // Prevent multiple executions
 
         isDead = true; // Mark as dead
+
+        // Notify any attached scripts (Slimes or Ghasts) before destroying
+        SendMessage("OnEnemyDeath", SendMessageOptions.DontRequireReceiver);
 
         Instantiate(deathFX, transform.position, Quaternion.identity);
 
@@ -156,6 +161,6 @@ public class Enemy : MonoBehaviour
 
         Debug.Log($"Enemy {gameObject.name} destroyed. Remaining enemies: {GameManager.instance.numOfEnemies}");
 
-        Destroy(gameObject); // Immediately destroy this enemy object
+        Destroy(gameObject);
     }
 }

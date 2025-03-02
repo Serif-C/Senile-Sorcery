@@ -5,38 +5,25 @@ using UnityEngine;
 public class Ghasts : MonoBehaviour
 {
     public float expReward = 1500f;
-
-    // Reference to Enemy component
-    public Enemy enemy;
-
     public bool hasGivenExp = false;
-
+    public Enemy enemy;
     private void Start()
     {
         enemy.isEnemyMelee = false;
     }
 
-    private void Update()
+    public void OnEnemyDeath()
     {
-        if (enemy.isDead == true && !hasGivenExp)
+        if (!hasGivenExp)
         {
-            addEXP(expReward);
             hasGivenExp = true;
-            StartCoroutine(DestroyAfterDelay());
+            addEXP(expReward);
         }
     }
-    
-    // should drop exp shards instead
+
     void addEXP(float exp)
     {
         GameManager.instance.currentExp += exp;
-    }
-
-    private IEnumerator DestroyAfterDelay()
-    {
-        // Wait for a short delay before destroying the enemy object
-        yield return 0.02f;
-        GameManager.instance.numOfEnemies -= 1;
-        Destroy(enemy.gameObject);
+        Debug.Log($"EXP +{expReward} from {gameObject.name}");
     }
 }
