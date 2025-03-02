@@ -134,19 +134,6 @@ public class Enemy : MonoBehaviour
 
     public void enemyDie()
     {
-        //if (isDead) return; // Prevent multiple executions
-
-        //isDead = true; // Mark as dead
-
-        //Instantiate(deathFX, transform.position, Quaternion.identity);
-
-        //// Reduce enemy count properly
-        //GameManager.instance.numOfEnemies--;
-
-        //Debug.Log($"Enemy {gameObject.name} destroyed. Remaining enemies: {GameManager.instance.numOfEnemies}");
-
-        //Destroy(gameObject); // Immediately destroy this enemy object
-
         if (isDead) return; // Prevent multiple executions
 
         isDead = true; // Mark as dead
