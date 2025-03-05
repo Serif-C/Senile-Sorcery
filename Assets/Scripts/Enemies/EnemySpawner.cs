@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
     private void Start()
     {
         spawnCD = startSpawnCD;
-        StartCoroutine(SpawnBoss(30));
+        StartCoroutine(SpawnBoss(60));
     }
 
     private void Update()

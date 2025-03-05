@@ -144,8 +144,8 @@ MonoBehaviour:
   animator: {fileID: 5475660302044632116}
   maxHealth: 15000
   currentHealth: 0
-  dmg: 3
-  armour: 10
+  dmg: 5
+  armour: 0
   isDead: 0
   stoppingDistance: 5
   retreatDistance: 2

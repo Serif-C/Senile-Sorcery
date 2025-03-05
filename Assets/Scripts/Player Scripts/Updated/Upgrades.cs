@@ -70,9 +70,9 @@ public class Upgrades : MonoBehaviour
         // an array of dmg values for higher scaling per pick up might be better?//
         if (skill.name.CompareTo("Damage 1") == 0)
         {
-            dmgUpgrade = skill.currentLevel * 10f;
+            dmgUpgrade = skill.currentLevel * 30f;
         }
-            float dmgIncrease = 10f + dmgUpgrade;
+            float dmgIncrease = 30f + dmgUpgrade;
 
         GameManager.instance.dmg += dmgIncrease;
         LevelUpStateHandler();

@@ -89,6 +89,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+
         // Ensure there's only one instance of GameManager
         if (instance == null)
         {
@@ -180,7 +181,7 @@ public class GameManager : MonoBehaviour
         {
             if(currentState == GameState.Gameplay)
             {
-                PauseGame();
+                PauseGame();    
             }
             else
             {

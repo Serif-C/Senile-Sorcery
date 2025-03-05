@@ -134,7 +134,7 @@ public class PlayerStats : MonoBehaviour
 
             GameManager.instance.lvl += 1;
             GameManager.instance.currentExp = 0;
-            GameManager.instance.expNeeded *= 1.8f;
+            GameManager.instance.expNeeded *= 1.3f;
             expBar.SetMaxEXP(GameManager.instance.expNeeded);
         }
     }

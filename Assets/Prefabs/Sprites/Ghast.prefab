@@ -165,7 +165,7 @@ MonoBehaviour:
   animator: {fileID: 1004075749947898698}
   maxHealth: 100
   currentHealth: 0
-  dmg: 1
+  dmg: 3
   armour: 30
   isDead: 0
   stoppingDistance: 10
@@ -174,7 +174,7 @@ MonoBehaviour:
   isEnemyMelee: 0
   damagePopUpPrefab: {fileID: 7972551977725614891, guid: 21e84bbbd3cae4842b9e641a8d78243b, type: 3}
   coinPrefab: {fileID: 6961998617827653391, guid: 88157972013f41c4ba8c0817eaf7b56a, type: 3}
-  deathFX: {fileID: 1004075749947898693}
+  deathFX: {fileID: 6483393368821600280, guid: 8f9f0a8639c79be419e6ecdb0aa93328, type: 3}
   dmgSFX: {fileID: 2017075838664925788}
 --- !u!114 &3420142737635922994
 MonoBehaviour:

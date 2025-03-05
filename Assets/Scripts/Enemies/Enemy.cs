@@ -129,6 +129,11 @@ public class Enemy : MonoBehaviour
         currentHealth -= dmg;
         GameManager.instance.dmgDealt = dmg;
         enemyHealthBar.SetHealth(currentHealth);
+
+        if (currentHealth <= 0)
+        {
+            enemyDie();
+        }
         Instantiate(damagePopUpPrefab, transform.position, Quaternion.identity);
     }
 
