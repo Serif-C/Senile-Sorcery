@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Upgrades : MonoBehaviour
 {
-    /* After choosing an upgrade (pressing the button) go back to GamePlay State
-     * Remove the levelup screen
-     * Then change timescale back to 1 (from 0/paused) */
     public SkillNode skill;
 
     private int projectileUpgrade;

@@ -11,7 +11,6 @@ public class GameManager : MonoBehaviour
     [Header("Non-Combat Related Stats")]
     public float collectRange = 1f;
 
-    // Player status variables //
     [Header("Player Upgradable Stats")]
     public float maxHealth = 100f;
     public float currentHealth;
@@ -26,20 +25,19 @@ public class GameManager : MonoBehaviour
     public float expNeeded = 1000f;
     public float shootCoolDown = 0f;
     public float startShootCoolDown = 1f;
-    public float shootRate = 0f; // The amount subtracted to startShootCoolDown per level (for now)
+    public float shootRate = 0f;
     public float shootRateLimit = 0.05f;
     public int projectileCount = 1;
     public int projectileSpreadAngle = 20;
     public bool canPierce = false;
     public int numOfPierce = 0;
 
-    // World Time
     [Header("World Time")]
     public float elapsedTime = 0f;
     public int minutes = 0;
     public int seconds = 0;
 
-    // Track num of enemies in scene
+    // Track number of enemies in scene
     [Header("Spawner")]
     public int numOfEnemies = 0;
     public int initialMaxNumOfEnemies = 15;
