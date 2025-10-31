@@ -72,7 +72,7 @@ public class BulletDmg : MonoBehaviour
     // Should have screen shake on explode, screen shakes more aggressively the more enemies are caught in explosion
     private void fireExplosion()
     {
-        float explodeDmg = (GameManager.instance.dmg * GameManager.instance.explosionDmgMultiplier);
+        //float explodeDmg = (GameManager.instance.dmg * GameManager.instance.explosionDmgMultiplier);
         Collider2D[] enemyColliders = Physics2D.OverlapCircleAll(transform.position, GameManager.instance.explosionRadius);
 
         for(int i = 0; i < enemyColliders.Length; i++)
@@ -81,7 +81,7 @@ public class BulletDmg : MonoBehaviour
             Enemy enemy = collider.gameObject.GetComponent<Enemy>();
             if(collider.gameObject.CompareTag("Enemy"))
             {
-                enemy.EnemyHitByExplosion(explodeDmg);
+                enemy.TriggerHitByExplosion();
             }
         }
     }

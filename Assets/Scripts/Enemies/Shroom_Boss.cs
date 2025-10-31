@@ -31,11 +31,16 @@ public class Shroom_Boss : MonoBehaviour
 
     private void Update()
     {
-        if (enemy.isDead == true && !hasGivenExp)
+        if (enemy.isDead == true)
         {
+            Debug.Log("boss dead");
+            // Thank You For Playing
+            GameManager.instance.SetGameFinishedState();
+
             addEXP(expReward);
             hasGivenExp = true;
             StartCoroutine(DestroyAfterDelay());
+
         }
 
         if (fireRate <= 0f)
@@ -49,6 +54,12 @@ public class Shroom_Boss : MonoBehaviour
             fireRate -= Time.deltaTime;
             enemy.animator.SetBool("isRangeAttackCD", false);
         }
+    }
+
+    public void OnEnemyDeath()
+    {
+        Debug.Log("boss dead");
+        GameManager.instance.SetGameFinishedState();
     }
 
     // should drop exp shards instead

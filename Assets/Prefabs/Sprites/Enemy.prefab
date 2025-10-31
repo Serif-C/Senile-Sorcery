@@ -141,12 +141,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cef4a82a6f59d5746b382a10c31456e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 20
   animator: {fileID: 934154776090165927}
   maxHealth: 100
   currentHealth: 0
   dmg: 5
-  armour: 10
+  armour: 0
   isDead: 0
   stoppingDistance: 5
   retreatDistance: 2
@@ -217,7 +217,7 @@ MonoBehaviour:
   - {x: 1, y: -0.6875, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: 59566
+  m_InstanceId: 47992
 --- !u!82 &9126396586262217253
 AudioSource:
   m_ObjectHideFlags: 0

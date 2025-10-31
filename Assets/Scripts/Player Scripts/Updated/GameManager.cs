@@ -50,6 +50,8 @@ public class GameManager : MonoBehaviour
     public GameObject pauseScreen;
     public GameObject levelUpScreen;
     public GameObject statusScreen;
+    public GameObject gameFinishedScreen;
+    private bool isGameFinished = false;
 
     [Header("Upgrades")]
     public RandomizeUpgrade randomizeUpgrade;
@@ -71,7 +73,8 @@ public class GameManager : MonoBehaviour
         GameOver,
         LevelUp,
         Status,
-        Inventory
+        Inventory,
+        GameFinished
     }
 
     public enum Elements
@@ -109,6 +112,8 @@ public class GameManager : MonoBehaviour
             UnloadScene();
         }
 
+        if (isGameFinished) ChangeState(GameState.GameFinished);
+
         // Ensure shoot rate never becomes faster than the limit
         // Rounds up/down startShootCoolDown to shootRateLimit
         if (startShootCoolDown <= shootRateLimit)
@@ -139,6 +144,10 @@ public class GameManager : MonoBehaviour
                 break;
 
             case GameState.Inventory:
+                break;
+
+            case GameState.GameFinished:
+                GameFinishWindow();
                 break;
 
             default:
@@ -206,6 +215,7 @@ public class GameManager : MonoBehaviour
         pauseScreen.SetActive(false);
         levelUpScreen.SetActive(false);
         statusScreen.SetActive(false);
+        gameFinishedScreen.SetActive(false);
     }
 
     public void CheckForStatsWindow()
@@ -242,6 +252,28 @@ public class GameManager : MonoBehaviour
             statusScreen.SetActive(false);
             Time.timeScale = 1f;
         }
+    }
+
+    private void CheckForGameFinished()
+    {
+        if (isGameFinished)
+        {
+
+        }
+    }
+
+    private void GameFinishWindow()
+    {
+        if (currentState == GameState.GameFinished)
+        {
+            gameFinishedScreen.SetActive(true);
+            Time.timeScale = 0f;
+        }
+    }
+
+    public void SetGameFinishedState()
+    {
+        isGameFinished = true;
     }
 
     // DONT NEED THIS CODE LOL! //

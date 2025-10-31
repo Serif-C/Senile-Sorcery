@@ -34,6 +34,8 @@ public class Enemy : MonoBehaviour
     public GameObject deathFX;
     public AudioSource dmgSFX;
 
+    private bool isHitByExplosion = false;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -112,6 +114,12 @@ public class Enemy : MonoBehaviour
         {
             dmg = 0;
         }
+
+        if (isHitByExplosion)
+        {
+            dmg *= GameManager.instance.explosionDmgMultiplier;
+        }
+
         currentHealth -= dmg;
         GameManager.instance.dmgDealt = dmg;
         enemyHealthBar.SetHealth(currentHealth);
@@ -122,20 +130,32 @@ public class Enemy : MonoBehaviour
         {
             enemyDie();
         }
+
+        ResetExplosionTrigger();
     }
 
-    public void EnemyHitByExplosion(float dmg)
+    public void TriggerHitByExplosion()
     {
-        currentHealth -= dmg;
-        GameManager.instance.dmgDealt = dmg;
-        enemyHealthBar.SetHealth(currentHealth);
-
-        if (currentHealth <= 0)
-        {
-            enemyDie();
-        }
-        Instantiate(damagePopUpPrefab, transform.position, Quaternion.identity);
+        isHitByExplosion = true;
     }
+
+    public void ResetExplosionTrigger()
+    {
+        isHitByExplosion = false;
+    }
+
+    //public void EnemyHitByExplosion(float dmg)
+    //{
+    //    currentHealth -= dmg;
+    //    GameManager.instance.dmgDealt = dmg;
+    //    enemyHealthBar.SetHealth(currentHealth);
+
+    //    if (currentHealth <= 0)
+    //    {
+    //        enemyDie();
+    //    }
+    //    Instantiate(damagePopUpPrefab, transform.position, Quaternion.identity);
+    //}
 
     public void enemyDie()
     {
@@ -146,6 +166,7 @@ public class Enemy : MonoBehaviour
         // Notify any attached scripts (Slimes or Ghasts) before destroying
         SendMessage("OnEnemyDeath", SendMessageOptions.DontRequireReceiver);
 
+        Instantiate(coinPrefab, transform.position, Quaternion.identity);
         Instantiate(deathFX, transform.position, Quaternion.identity);
 
         // Reduce enemy count properly

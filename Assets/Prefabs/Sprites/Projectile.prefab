@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 3544530603540488250}
   - component: {fileID: 3544530603540488251}
   - component: {fileID: 3544530603540488253}
-  - component: {fileID: 3037114782235785672}
   - component: {fileID: 2853759807788715295}
   - component: {fileID: 7266238543368971807}
+  - component: {fileID: 2626919331182852018}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: PlayerBullet
@@ -171,27 +171,6 @@ MonoBehaviour:
   - {x: -0.21637651, y: 0.7924863, z: 0}
   - {x: -0.38369513, y: 0.593844, z: 0}
   - {x: -0.38369527, y: -0.46560717, z: 0}
---- !u!50 &3037114782235785672
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3544530603540488248}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
 --- !u!70 &2853759807788715295
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -222,4 +201,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 1823217443701009628, guid: 0a670623fa0a04a40b8c4b163f47a9b0, type: 3}
   normalBulletParticle: {fileID: 823428353206689916, guid: ec50627bdca6ded40993ec2cf932c62e, type: 3}
-  sfx: {fileID: 0}
+--- !u!50 &2626919331182852018
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3544530603540488248}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

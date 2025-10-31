@@ -10,6 +10,8 @@ public class EnemyBulletDmg : MonoBehaviour
     private Vector2 bulletCurrentPosition;
 
     public GameObject particle;
+    public float bulletLifeTime = 2f;
+    private float timeElapsed = 0f;
 
     private void Start()
     {
@@ -19,6 +21,7 @@ public class EnemyBulletDmg : MonoBehaviour
     private void Update()
     {
         bulletCurrentPosition = gameObject.transform.position;
+        timeElapsed += Time.deltaTime;
         DeleteBullet();
     }
 
@@ -35,7 +38,7 @@ public class EnemyBulletDmg : MonoBehaviour
 
     void DeleteBullet()
     {
-        if(Vector2.Distance(bulletStarPoint, bulletCurrentPosition) > 50)
+        if(Vector2.Distance(bulletStarPoint, bulletCurrentPosition) > 50 || timeElapsed >= bulletLifeTime)
         {
             Destroy(gameObject);
         }

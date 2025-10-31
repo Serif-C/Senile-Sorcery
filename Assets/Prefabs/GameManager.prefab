@@ -44,12 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84a2512770a94aa4f9d68a68dd4095cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasReset: 0
+  collectRange: 1
   maxHealth: 100
   currentHealth: 0
+  healthRegen: 0
   dmg: 50
+  dmgDealt: 0
   armour: 1
   critChance: 0
-  critMulti: 100
+  critDmg: 1.5
   lvl: 0
   currentExp: 0
   expNeeded: 1000
@@ -72,5 +76,13 @@ MonoBehaviour:
   pauseScreen: {fileID: 1520298200905993757, guid: 5a0026cdbf1b19844899182e7b65dd79, type: 3}
   levelUpScreen: {fileID: 8487401700602322629, guid: 6981da0546d8ea145b29e344db48c3e2, type: 3}
   statusScreen: {fileID: 2781420784324548168, guid: 6bf5a4b785d7f10438076b4d1c0c96aa, type: 3}
+  gameFinishedScreen: {fileID: 4114931145595441402, guid: 85c188dbff91d1345902bbf8881db582, type: 3}
   randomizeUpgrade: {fileID: 8487401700602322624, guid: 6981da0546d8ea145b29e344db48c3e2, type: 3}
-  upgradeType: 0
+  swordDmg: 1000
+  hasTakenSword: 0
+  numOfSwords: 0
+  swordDamageRadius: 5
+  orbitSpeed: 50
+  currentElementType: 0
+  explosionRadius: 2
+  explosionDmgMultiplier: 0.3

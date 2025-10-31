@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 3
   animator: {fileID: 5475660302044632116}
-  maxHealth: 15000
+  maxHealth: 1000
   currentHealth: 0
   dmg: 5
   armour: 0

@@ -13,7 +13,7 @@ public class Spawner_Two : MonoBehaviour
     public float initialSpawnCooldown = 5f;  // Initial delay between spawns
     public float minSpawnCooldown = 0.05f;   // Minimum spawn time
     public float spawnAcceleration = 0.1f;   // Rate at which spawns speed up
-    public float bossSpawnInterval = 30f;    // Time interval for boss spawns
+    public float bossSpawnInterval = 300f;    // Time interval for boss spawns
 
     private float currentSpawnCooldown;
     private float elapsedTime = 0f;
@@ -42,7 +42,7 @@ public class Spawner_Two : MonoBehaviour
             // Dynamically decrease spawn cooldown over time, but cap at minSpawnCooldown
             currentSpawnCooldown = Mathf.Max(initialSpawnCooldown * Mathf.Exp(-spawnAcceleration * elapsedTime), minSpawnCooldown);
 
-            Debug.Log($"[Time {elapsedTime:F2}s] Next enemy in {currentSpawnCooldown:F2} seconds.");
+            //Debug.Log($"[Time {elapsedTime:F2}s] Next enemy in {currentSpawnCooldown:F2} seconds.");
 
             yield return new WaitForSeconds(currentSpawnCooldown);
         }
